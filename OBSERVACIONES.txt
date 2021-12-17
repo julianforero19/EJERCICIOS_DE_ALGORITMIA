@@ -1,2 +1,5 @@
 OBSERVACIONES:
 El compañero juan estaban arenas no presenta ejercicios de algoritmia, del resto todos cumplen con sus ejercicios
+
+Algunos compañeros tuvieron dificultades con el git asi que cristian realizo los commits del compañero harold y julian modifico la plantilla por angie ya que tuvo problemas con su equipo
+
