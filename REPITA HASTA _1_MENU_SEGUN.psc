@@ -7,6 +7,9 @@ Algoritmo sin_titulo
 	Definir tis Como Entero
 	Definir n,cuadrado Como Entero
 	Definir num,i Como Entero;
+	Definir edad Como Entero
+	Definir Numpulsaciones Como Real
+	Definir A,calorias,T Como real
 	
 	Repetir
 		
@@ -38,24 +41,78 @@ Algoritmo sin_titulo
 					Segun opcEj Hacer
 						1:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA SECUENCIAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE pulsaciones"						
+							Escribir "  Calcular el número de pulsaciones que una persona debe tener por cada 10 segundos de ejercicio,//num.pulsaciones = (220 - edad) / 10"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							Escribir "Ingrese su edad"
+							Leer edad
+							
+							Numpulsaciones<- (220-edad)/10
+							
+							Escribir ""
+							
+							Escribir "El numero de pulsaciones que usted tiene por cada 10 segundos es de: ",Numpulsaciones
 						2:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CONDICIONAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE consumo calorias"						
+							Escribir " Una persona enferma, que pesa 70 kg, se encuentra en reposo y desea saber cuántas calorías consume su cuerpo durante todo el tiempo que realice una misma actividad. Las actividades que tiene permitido realizar son únicamente dormir o estar sentado en reposo.Los datos que tiene son que estando dormido consume 1.08 calorías por minuto y estando sentado en reposo consume 1.66 calorías por minuto"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							Escribir "Porfavor seleccione una opcion"
+							Escribir "1. Dormir"
+							Escribir "2. Sentado en Reposo"
+							Leer A
+							
+							
+							Si A=1 o A=2 Entonces
+								Escribir "porfavor ingrese el tiempo que dura realizando esta actividad"
+								Leer Tiempo
+								T=Tiempo*60
+								Si A=1 Entonces
+									calorias=1.08*T
+									Escribir "las calorias quemadas por ",t," minutos es de: ",calorias
+								SiNo
+									calorias=1.66*T
+									Escribir "las calorias quemadas por ",t," minutos es de: ",calorias, " calorias"
+								Fin Si
+							SiNo
+								Escribir "Esta no es una opcion valida"
+							Fin Si
 						3:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE lectura de numeros hasta que se ingrese 0"						
+							Escribir "  Leer números hasta que se introduzca un 0. Para cada uno indicar si es par o impar"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							Escribir "digite un numero"
+							Leer n
+							
+							Repetir
+								Si n mod 2=0 Entonces
+									Escribir "el numero ",n," es par"
+								SiNo
+									Escribir "El numero ",n," es impar"
+								Fin Si
+								Escribir " "
+								Escribir "ingrese un  numero"
+								leer n
+							Hasta Que n=0
 						4:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS PARA"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE pedir 10 numeros"						
+							Escribir "   Pedir 10 números, y mostrar al final si se ha introducido alguno negativo."
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							contador=0
+							Para i<-1 Hasta 10 Con Paso 1 Hacer
+								
+								Escribir "Digite un numero";
+								Leer num;
+								Si num<0 Entonces
+									contador<-contador+1
+								Fin Si
+							Fin Para
+							Escribir "se han introducido ",contador," numeros negativos"
 						De Otro Modo:
 							Escribir "OPCIÓN NO VÁLIDA"
 					Fin Segun			
