@@ -18,6 +18,10 @@ Algoritmo sin_titulo
 	definir sueldo como entero
 	definir km Como Entero
 	definir hijos Como Entero
+	Definir salario Como Entero
+	Definir n Como Entero
+	Definir  n,suma Como Real
+	
 	
 	Repetir
 		
@@ -358,24 +362,63 @@ Algoritmo sin_titulo
 					Segun opcEj Hacer
 						1:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA SECUENCIAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE Salario"						
+							Escribir "   SE TRATA DE Calcular el nuevo salario de un obrero si obtuvo un incremento sobre su salario anterior"
+							Escribir "   SOLUCIONAR EL PROBLEMA."		
+							Escribir "el salario es 5000000"
+							Leer salario
+							
+							porcentaje <- salario * 25 / 100
+							total <- salario + porcentaje 
+							
+							Mostrar "su nuevo salario es: " total;
 						2:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CONDICIONAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE Camisas"						
+							Escribir "   SE TRATA DE Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran tres camisas o más se aplica un descuento del 20% sobre el total de la compra y si son menos de tres camisas un descuento del 10% "
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							Escribir "escribe el precio de la camisa"
+							Leer n
+							Escribir "escribe el total de camisas compradas"
+							Leer z
+							total = n * z 
+							Si z < 3 Entonces
+								descuento = total * 0.10
+							SiNo
+								descuento = total * 0.20
+							Fin Si
+							Escribir "el total a pagar es: $",total - descuento
+							Escribir "el descuento aplicado es: $",descuento
 						3:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE suma de numeros hasta cierto punto"						
+							Escribir "   SE TRATA DE Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos."
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							n = 1
+							suma = 0
+							Mientras n <> 0 Hacer
+								Escribir "ingresa un numero"
+								Leer n
+								suma = suma + n
+							FinMientras
+							Escribir "la suma de los numeros es: ", suma
 						4:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS PARA"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE Multiplos de 3"						
+							Escribir "   SE TRATA DE Pedir 5 números e indicar si alguno es múltiplo de 3."
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							Para n<-1 Hasta 5 Con Paso 1 Hacer
+								Mostrar "escribe un numero"
+								Leer x
+								
+							Fin Para
+							
+							si n mod 3 == 0 Entonces
+								Mostrar "el numero ",n," es multiplo de tres"
+							SiNo
+								Mostrar "el numero ",n," no es multiplo de tres"
+								
+							FinSi
 						De Otro Modo:
 							Escribir "OPCIÓN NO VÁLIDA"
 					Fin Segun			
