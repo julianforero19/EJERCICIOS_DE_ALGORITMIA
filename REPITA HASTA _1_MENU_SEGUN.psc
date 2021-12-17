@@ -2,6 +2,11 @@ Algoritmo sin_titulo
 	
 	Definir seguir,seguirAprendiz Como Caracter
 	Definir opc,opcEj Como Entero
+	Definir masa,presion,volumen,temperatura Como Real
+	Definir c,tasaI,tasa,I,cr,ct,cb,total Como Real
+	Definir tis Como Entero
+	Definir n,cuadrado Como Entero
+	Definir num,i Como Entero;
 	
 	Repetir
 		
@@ -244,24 +249,115 @@ Algoritmo sin_titulo
 					Segun opcEj Hacer
 						1:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA SECUENCIAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE Masa aire"						
+							Escribir "   Indague cual es la masa de aire dado tres valores ( presión, volumen, temperatura)correspondientes a la fórmula:masa = (presión * volumen)  / (0.37 * (temperatura + 460))"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							Escribir "ingrese la presion"
+							Leer presion
+							
+							Escribir "Ingrese el volumen"
+							Leer  volumen
+							
+							Escribir "Ingrese la temperatura"
+							leer temperatura
+							
+							masa <- (presion * volumen) /(0.37 * (temperatura+460))
+							
+							Escribir "la masa corresponde a: ",masa
+							
 						2:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CONDICIONAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE concepto interes"						
+							Escribir " Un hombre desea saber cuánto dinero se genera por concepto de intereses sobre la cantidad que tiene en inversión en el banco.El decidirá reinvertir los intereses siempre y cuando estos excedan a $7000, y en ese caso desea saber cuánto dinero tendrá finalmente en su cuenta"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							
+							Escribir "Ingresar el valor de la inversion que tiene en el banco"
+							Leer c
+							
+							Escribir "Ingrese la tasa de interes que tiene"
+							
+							Leer tasa
+							
+							tasaI=tasa/100
+							Escribir "Porfavor seleccione la opcion dependiendo de cada cuanto se hace efectiva la tasa de interés"
+							Escribir "1) mensual"
+							Escribir "2) bimestral"
+							Escribir "3) trimestral"
+							Escribir "4) semestral"
+							Escribir "5) anual"
+							Leer tis
+							
+							Segun tis Hacer
+								1:
+									T=12
+								2:
+									T=6
+								3:
+									T=4
+								4:
+									T=2
+								5:
+									T=1
+									
+							Fin Segun
+							
+							I=c*tasaI*T
+							
+							Escribir "el interés que usted recibe anual con la cantidad inicial ingresada es de: ",I
+							ct=c+I
+							
+							Si ct>=7000 Entonces
+								cr=7000-ct
+								I=7000*tasaI*T
+								cb=I+cr
+								total=cb+7000
+								Escribir "El interes que usted recibe con la cantidad que reinvirtio es de: ",I
+								Escribir "La cantidad de dinero que tiene en su cuenta fuera de la inversion que se realizo recientemente es de: ",cb
+								Escribir "Su capital total es de: ",total
+							SiNo
+								Escribir "Su capital no supero los 6999 para poder reinvertir"
+								Escribir "Su capital total es de: ",ct
+							Fin Si
 						3:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE leer un cuadrado"						
+							Escribir " Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo..."
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							
+							
+							Escribir "Ingrese un numero"
+							Leer n
+							Mientras n>=0 Hacer
+								
+								cuadrado<-n^2
+								Escribir "el cuadrado del numero ",n," es: ",cuadrado
+								Escribir "ingresar otro numero"
+								Leer n
+							Fin Mientras
+							
 						4:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS PARA"
 							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "  Pide un número (que debe estar entre 0 y 10) y mostrar la tabla de multiplicar de dicho número"
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							Escribir "Ingrese un numero";
+							Leer num;
+							
+							
+							Si num<=10 y num>=0 Entonces
+								Escribir "esta es la tabla de multipicar de dicho numero"
+								Para i<-1 Hasta 10 Con Paso 1 Hacer
+									Escribir num,"*",i,"=",num*i
+									
+								FinPara
+								
+							SiNo
+								Escribir "Ingrese un numero entre 0 y 10"
+							Fin Si
 						De Otro Modo:
 							Escribir "OPCIÓN NO VÁLIDA"
 					Fin Segun			
@@ -271,7 +367,7 @@ Algoritmo sin_titulo
 					
 				Hasta Que (seguirAprendiz='S') O (seguirAprendiz='s')					
 			De Otro Modo:
-				Escribir "USTED HA SELECCIONADI UN A OPCIÓN NO VÁLIDA"
+				Escribir "USTED HA SELECCIONADO UN A OPCIÓN NO VÁLIDA"
 		Fin Segun
 		
 		
