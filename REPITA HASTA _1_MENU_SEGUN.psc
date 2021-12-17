@@ -21,7 +21,9 @@ Algoritmo sin_titulo
 	Definir salario Como Entero
 	Definir n Como Entero
 	Definir  n,suma Como Real
-	
+	Definir lunes, miercoles, viernes, promedio Como Real
+	Definir contador,n Como Entero
+	Definir edad, estatura, suma Como Real
 	
 	Repetir
 		
@@ -278,24 +280,107 @@ Algoritmo sin_titulo
 					Segun opcEj Hacer
 						1:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA SECUENCIAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE determinar promedio de recorrido "						
+							Escribir "   Todos los lunes, miércoles y viernes, una persona corre la misma ruta y cronometra los tiempos obtenidos. Determinar el tiempo promedio que la persona tarda en recorrer la ruta en una semana cualquiera"
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							
+							Escribir "ingrese el tiempo cronometrado el lunes"
+							Leer lunes
+							Escribir "ingrese el tiempo cronometrado el miercoles"
+							Leer miercoles
+							Escribir "ingrese el tiempo cronometrado el viernes"
+							leer viernes
+							
+							promedio = (lunes + miercoles + viernes) / 3
+							Escribir  "el tiempo cronometrado promedio para esta semana es: ", promedio
 						2:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CONDICIONAL"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."						
+							Escribir "PROBLEMA:   SE TRATA DE imprimir nombre aiculo, clave precio y descuento "						
+							Escribir "   Hacer un algoritmo que imprima el nombre de un artículo, clave, precio original y su precio con descuento. El descuento lo hace en base a la clave, si la clave es 01 el descuento es del 10% y si clave es 02 el descuento en del 20% (solo existen dos claves)."
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							Escribir " ingrese el nombre del articulo "
+							Leer art
+							Escribir  " ingrese la clave "
+							Leer clave
+							Escribir  " precio del articulo "
+							Leer  precio_original
+							
+							si clave = 01 Entonces
+								descuento = precio_original*0.10
+								total_pagar = precio_original - descuento
+							SiNo
+								descuento = precio_original*0.20
+								total_pagar = precio_original- descuento
+								
+								
+							FinSi
+							Imprimir " nombre del articulo: ", art
+							Imprimir " clave del articulo: ", clave
+							Imprimir " precio: ", precio_original
+							Imprimir " total a pagar: ", total_pagar
+							
 						3:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE mostrar numeros introducidos"						
+							Escribir "   Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido"
+							Escribir "   SOLUCIONAR EL PROBLEMA."	
+							
+							contador<-0
+							
+							Repetir
+								Escribir "Ingrese un numero"
+								leer n
+								
+								contador<-contador+1
+								
+							Hasta Que n<0
+							
+							Escribir "se han introducido ",contador," numeros"
 						4:
 							Escribir "ESTE ES UN PROBLEMA DE ESTRUCTURA CICLICA MIENTRAS PARA"
-							Escribir "PROBLEMA:   SE TRATA DE ...."						
-							Escribir "   SE TRATA DE ...."
-							Escribir "   SOLUCIONAR EL PROBLEMA."					
+							Escribir "PROBLEMA:   SE TRATA DE  mostrar edad, altura, y mayores de 18 años y mayor altura 1.75"						
+							Escribir "  Dadas las edades y alturas de 5 alumnos, mostrar la edad y la estatura media, la cantidad de alumnos mayores de 18 años, y la cantidad de alumnos que miden más de 1.75."
+							Escribir "   SOLUCIONAR EL PROBLEMA."
+							
+							
+							mayor18<-0
+							estaturamayor<-0
+							
+							
+							Para i<-1 Hasta 5 Con Paso 1 Hacer
+								
+								Escribir " ingrese edad almmno ", i
+								Leer edad
+								
+								Escribir " ingrese estatura alumno ", i 
+								Leer estatura 
+								suma = suma + edad
+								
+								si edad > 18 Entonces
+									mayor18<-mayor18+1
+									SI estatura> 1.75 Entonces
+										estaturamayor<-estaturamayor+1
+									FinSi
+									
+									
+									
+								FinSi
+								si edad>0 Entonces
+									edad<-edad+1
+									sumaEdad=sumaEdad+edad
+								FinSi
+								si estatura > 0 Entonces
+									estatura<-estatura+1
+									sumaEstatura=sumaEstatura+estatura
+								FinSi
+								
+								
+								
+							FinPara
+							Escribir " Almunos mayores de 18 : ", mayor18
+							Escribir  " Estatura media : ", estatura / sumaEstatura
+							Escribir  " Edad media: ", edad / sumaEdad
+							Escribir  " Almunos que miden mas de 1.75: " estaturamayor
 						De Otro Modo:
 							Escribir "OPCIÓN NO VÁLIDA"
 					Fin Segun			
